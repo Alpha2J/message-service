@@ -29,10 +29,10 @@
 2. 完了之后你推个commit到master就会触发自动构建，自动部署上服务器了
 
 ## 成功的例子
-[!发送email](assets/sending_email_message.png)
-[!发送企业微信消息](assets/sending_wechat_work_message.png)
-[!接收到的email](assets/success_email.png)
-[!接收到的企业微信消息](assets/success_wechat_work.png)
-[!github action的secret配置](assets/config_action.png)
+![发送email](assets/sending_email_message.png)
+![发送企业微信消息](assets/sending_wechat_work_message.png)
+![接收到的email](assets/success_email.png)
+![接收到的企业微信消息](assets/success_wechat_work.png)
+![github action的secret配置](assets/config_action.png)
 
 
