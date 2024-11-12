@@ -92,6 +92,23 @@ CREATE TABLE `message_sending_logs`
     `updated_at`    DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间'
 );
 
+INSERT INTO `email_smtp_configs`(host, port, username, password, status)
+VALUES ('smtp.qq.com', 587, 'jeb.wang@foxmail.com', 'vjgduqqzzisocjjf', 1);
 
+
+INSERT INTO `email_senders`(email_smtp_config_id, address)
+VALUES (1, 'jeb.wang@foxmail.com');
+INSERT INTO `email_senders`(email_smtp_config_id, address)
+VALUES (1, 'jeb.wang@qq.com');
+INSERT INTO `email_senders`(email_smtp_config_id, address)
+VALUES (1, '3287566354@qq.com');
+
+
+
+INSERT INTO `wechat_work_app_configs`(company_id, company_secret, agent_id, msg_receiving_server_token,
+                                      msg_receiving_server_aeskey,
+                                      description)
+VALUES ('ww4cc67e696c646ce6', '1UiVx06UE1rHgcZXA64waqdIdyygDmDDKb-Fli1bkzw', '1000002', 'tg3jOzjOjyFcF6NfjETdbPs',
+        'zfNn4LxxyoSy2hOXASilAgfaON291YiRFwlyB3e0MBH', '');
 
 
