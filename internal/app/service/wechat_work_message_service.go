@@ -28,7 +28,7 @@ func (*WechatWorkMessageService) ValidationUrl(msgSignature string, timestamp st
 		return ""
 	}
 
-	wxcpt := wechat_lib.NewWXBizMsgCrypt(wechatWorkAppConfig.MsgReceivingServerToken, wechatWorkAppConfig.MsgReceivingServerAESKey, wechatWorkAppConfig.CompanyID, wechat_lib.JsonType)
+	wxcpt := wechat_lib.NewWXBizMsgCrypt(wechatWorkAppConfig.MsgReceivingServerToken, wechatWorkAppConfig.MsgReceivingServerAeskey, wechatWorkAppConfig.CompanyID, wechat_lib.JsonType)
 	decryptedEchoStr, cryptError := wxcpt.VerifyURL(msgSignature, timestamp, nonce, echoStr)
 	if nil != cryptError {
 		logger.Errorf("Wechat work callback url verifiy failed: %v", err)
