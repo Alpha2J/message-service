@@ -92,3 +92,17 @@ CREATE TABLE `message_sending_logs`
     `updated_at`    DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间'
 );
 
+INSERT INTO `email_smtp_configs`(host, port, username, password, status)
+VALUES ('smtp.qq.com', 587, 'jeb.wang@foxmail.com', 'todo modify me', 1);
+
+
+INSERT INTO `email_senders`(email_smtp_config_id, address)
+VALUES (1, 'jeb.wang@foxmail.com');
+
+
+INSERT INTO `wechat_work_app_configs`(company_id, company_secret, agent_id, msg_receiving_server_token,
+                                      msg_receiving_server_aeskey,
+                                      description)
+VALUES ('todo modify me', 'todo modify me', '1000002', 'todo modify me',
+        'todo modify me', '');
+
