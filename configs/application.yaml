@@ -1,0 +1,14 @@
+enable_debug: true
+env: local
+app:
+  name: message-service
+  port: 8080
+mysql:
+  host: localhost
+  port: 3306
+  user: root
+  password: 123456
+  dbname: message_service
+
+business:
+  owner_token: PpbART7upLyW?D&y
