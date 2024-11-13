@@ -113,5 +113,5 @@ func IsDebugging() bool {
 }
 
 func IsReleaseMode() bool {
-	return config.Env == ENV_PROD
+	return env == ENV_PROD
 }
